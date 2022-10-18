@@ -80,7 +80,7 @@ const EditCards = () => {
           Filter
         </button>
         <button onClick={resetCards} className="button">
-          Reset Cards
+          Reset Filters
         </button>
       </div>
       <div className="editFlashCards__container">
