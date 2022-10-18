@@ -1,19 +1,8 @@
 import { useState, useEffect } from "react";
-import AddCard from "./components/AddCard";
-import EditCards from "./components/EditCards";
-import FlashCard from "./components/FlashCard";
+import { CreateCard } from "./components/CreateCard";
+import { EditCards } from "./components/EditCards";
+import { FlashCard } from "./components/FlashCard";
 import "./App.css";
-
-const test = [
-  {
-    ordering: 1,
-    clue: "山",
-    kun: "やま",
-    on: "サン, セン",
-    english: "mountain",
-    notes: "",
-  },
-];
 
 function App() {
   const [flashcards, setFlashcards] = useState([]);
@@ -119,7 +108,7 @@ function App() {
         </button>
       </div>
 
-      {showAddCard && <AddCard />}
+      {showAddCard && <CreateCard />}
       {showEdit && <EditCards />}
 
       <button onClick={backupCards} className="button top">

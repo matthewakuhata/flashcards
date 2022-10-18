@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import AddCard from "./AddCard";
+import { CreateCard } from "../CreateCard";
+import "./styles.css";
 
 const EditCards = () => {
   const [flashcards, setFlashcards] = useState([]);
@@ -60,8 +61,8 @@ const EditCards = () => {
   };
 
   return (
-    <section className="editFlashCards">
-      <div className="editFlashCards__filters">
+    <section className="editCards">
+      <div className="editCards__filters">
         <input
           onChange={(e) => setOrderSeperated(e.target.value)}
           placeholder="Order (006,007,008,010)"
@@ -83,9 +84,9 @@ const EditCards = () => {
           Reset Filters
         </button>
       </div>
-      <div className="editFlashCards__container">
+      <div className="editCards__container">
         {flashcards.map((card, index) => (
-          <AddCard
+          <CreateCard
             key={`${card.clue}-${index}`}
             initialValues={card}
             index={index}

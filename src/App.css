@@ -22,45 +22,6 @@
   margin-top: auto !important;
 }
 
-.editFlashCards{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-.editFlashCards__container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.editFlashCards__filters {
-  margin-top: 50px;
-  margin-inline: auto;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  border-radius: 5px;
-  border: 1px solid white
-}
-
-.editFlashCards__filters input {
-  margin: 5px;
-  width: 200px;
-}
-
-.flashcardAdd {
-  padding: 12px 0px 12px;
-  border-radius: 5px;
-  width: 500px;
-  margin: 20px;
-  font-size: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-}
-
 input {
   border: 0;
   outline: 0;
@@ -80,22 +41,12 @@ input {
   font-size: 100px !important;
 }
 
-.flashcardAdd__clue{
-  font-size: 98px;
-  width: 90%;
-}
-
-.flashcardAdd__answer input{
-  font-size: 20px;
-}
-
-
-::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(255, 255, 255, 0.8);
   opacity: 1; /* Firefox */
   text-align: center;
 }
-
 
 .flashcard {
   padding: 12px 0px 12px;

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./styles.css";
 
-const AddCard = ({ initialValues, isEdit = false, index }) => {
+const CreateCard = ({ initialValues, isEdit = false, index }) => {
   const [ordering, setOrdering] = useState(initialValues?.ordering);
   const [clue, setClue] = useState(initialValues?.clue);
   const [kun, setKun] = useState(initialValues?.kun);
@@ -76,13 +77,13 @@ const AddCard = ({ initialValues, isEdit = false, index }) => {
   return (
     <>
       <div
-        className={`flashcardAdd ${playAnimation ? " flip-vertical-left" : ""}`}
+        className={`createCard ${playAnimation ? " flip-vertical-left" : ""}`}
       >
         {!hidden && (
           <>
             <span style={{ marginRight: "auto", paddingLeft: "10px" }}>
               <input
-                className="flashcardAdd__ordering"
+                className="createCard__ordering"
                 placeholder="Ordering..."
                 value={ordering}
                 onChange={(e) => setOrdering(e.target.value)}
@@ -91,7 +92,7 @@ const AddCard = ({ initialValues, isEdit = false, index }) => {
             </span>
             {showAnswer ? (
               <div
-                className="flashcardAdd__answer"
+                className="createCard__answer"
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -122,7 +123,7 @@ const AddCard = ({ initialValues, isEdit = false, index }) => {
             ) : (
               <div>
                 <input
-                  className="flashcardAdd__clue"
+                  className="createCard__clue"
                   value={clue}
                   onChange={(e) => setClue(e.target.value)}
                   placeholder="Clue"
@@ -169,4 +170,4 @@ const AddCard = ({ initialValues, isEdit = false, index }) => {
   );
 };
 
-export default AddCard;
+export default CreateCard;
