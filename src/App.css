@@ -5,8 +5,97 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
 }
+
+.center {
+  margin: auto;
+}
+
+.top-10px {
+  margin-top: 10px !important;
+}
+
+.top {
+  margin-top: auto !important;
+}
+
+.editFlashCards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.editFlashCards__container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.editFlashCards__filters {
+  margin-top: 50px;
+  margin-inline: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid white
+}
+
+.editFlashCards__filters input {
+  margin: 5px;
+  width: 200px;
+}
+
+.flashcardAdd {
+  padding: 12px 0px 12px;
+  border-radius: 5px;
+  width: 500px;
+  margin: 20px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.8);
+  min-width: 20px;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+.button-group button {
+  margin: 5px;
+}
+
+.medium-text {
+  font-size: 100px !important;
+}
+
+.flashcardAdd__clue{
+  font-size: 98px;
+  width: 90%;
+}
+
+.flashcardAdd__answer input{
+  font-size: 20px;
+}
+
+
+::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255, 0.8);
+  opacity: 1; /* Firefox */
+  text-align: center;
+}
+
 
 .flashcard {
   padding: 12px 0px 12px;
@@ -20,6 +109,10 @@
   flex-direction: column;
 }
 
+.flashcard:hover {
+  cursor: pointer;
+}
+
 .flashcard span {
   padding-left: 10px;
   margin-right: auto;
@@ -30,33 +123,7 @@
 }
 
 .flashcard__answer {
-  font-size: 2vh;
-}
-
-.newFlashcard {
-  margin: 20px;
-  width: 100%;
-  align-items: center;
-}
-
-.newFlashcard input {
-  width: 100%;
-  height: 30px;
   font-size: 20px;
-  margin-bottom: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-}
-
-.newFlashcard button {
-  width: 12rem;
-}
-
-.flashcardControls button {
-  margin: 5px;
-  width: 12rem;
 }
 
 .App-logo {
@@ -66,6 +133,7 @@
 
 /* CSS */
 .button {
+  width: 200px;
   align-items: center;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -91,7 +159,6 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
-  width: auto;
 }
 
 .button:hover,
