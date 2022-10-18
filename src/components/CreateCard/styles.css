@@ -1,0 +1,20 @@
+.createCard {
+  padding: 12px 0px 12px;
+  border-radius: 5px;
+  width: 500px;
+  margin: 20px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.createCard__clue {
+  font-size: 98px;
+  width: 90%;
+}
+
+.createCard__answer input {
+  font-size: 20px;
+}
