@@ -1,7 +1,15 @@
 import { useState } from "react";
 
-const FlashCard = ({ kun, on, english, ordering, clue, notes }) => {
-  const [showAnswer, setShowAnswer] = useState(false);
+const FlashCard = ({
+  kun,
+  on,
+  english,
+  ordering,
+  clue,
+  notes,
+  showAnswer,
+  setShowAnswer,
+}) => {
   const [hidden, setHidden] = useState(false);
   const [playAnimation, setPlayAnimation] = useState(false);
 
@@ -10,7 +18,7 @@ const FlashCard = ({ kun, on, english, ordering, clue, notes }) => {
 
     setTimeout(() => {
       setHidden(true);
-      setShowAnswer(!showAnswer);
+      setShowAnswer((prev) => !prev);
     }, 200);
 
     setTimeout(() => {

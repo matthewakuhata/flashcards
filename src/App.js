@@ -72,7 +72,13 @@ function App() {
 
   return (
     <div className="App">
-      {currCard && <FlashCard {...currCard} />}
+      {currCard && (
+        <FlashCard
+          {...currCard}
+          showAnswer={showAnswer}
+          setShowAnswer={setShowAnswer}
+        />
+      )}
 
       <div className="button-group">
         <button className="button" onClick={resetCards}>
